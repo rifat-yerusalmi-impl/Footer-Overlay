@@ -1,9 +1,5 @@
-var targetElement = document.getElementById('taboola-below-article-thumbnails-pl3'),
-    footerOverlayDiv = document.createElement('div'),
-    closeButton = document.createElement('div'),
-    centerLine = document.createElement('div'),
-    body = document.getElementsByTagName('body')[0],
-    hideFooter = document.createElement('div'),
+var CARD_NO = 8,
+    LINK_COUNT = 6,
     linkTitles = {
         'Join': '#',
         'Help & Feedback': '#',
@@ -11,14 +7,20 @@ var targetElement = document.getElementById('taboola-below-article-thumbnails-pl
         'Privacy': '#',
         'Terms': '#',
         'Sitemap': '#'
-    }, 
-    // Number of items to render (Max 6)
-    LINK_COUNT = 6;
+                },
+    targetElement = document.getElementById('taboola-below-article-thumbnails-pl'+ CARD_NO + ''),
+    footerOverlayDiv = document.createElement('div'),
+    closeButton = document.createElement('div'),
+    centerLine = document.createElement('div'),
+    hideFooter = document.createElement('div'),
+    body = document.getElementsByTagName('body')[0];
+    
+    
 
 // Assigning attributes to the parent div
 footerOverlayDiv.id = 'footerOverlayDiv';
 footerOverlayDiv.className = ('footerOverlayDiv');
-footerOverlayDiv.style.height = '65px';
+footerOverlayDiv.style.height = '78px';
 footerOverlayDiv.style.width = '100%';
 footerOverlayDiv.style.backgroundColor = '#f7f7f7';
 footerOverlayDiv.style.border = '1px solid #e4e4e4';
@@ -96,7 +98,7 @@ for (i = 0; i < LINK_COUNT; i++) {
         textNodesSpan.style.marginTop = '3px';
         textNodesSpan.style.width = '11%';
         // parent div styles
-        footerOverlayDiv.style.height = '33px';
+        footerOverlayDiv.style.height = '45px';
         // center line style
         centerLine.style.display = 'none';
         // close button styles
